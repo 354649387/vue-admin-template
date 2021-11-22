@@ -153,6 +153,7 @@ export const constantRoutes = [{
         component: () => import('@/views/article/add'),
         meta: {
           title: '文章新增',
+          icon: 'el-icon-s-help'
         }
       },
       {
@@ -161,6 +162,7 @@ export const constantRoutes = [{
         component: () => import('@/views/article/update'),
         meta: {
           title: '文章更新',
+          icon: 'el-icon-s-help'
         }
       },
       {
