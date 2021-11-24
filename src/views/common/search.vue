@@ -2,7 +2,7 @@
   <div>
     <el-form :inline="true" :model="formInline" class="demo-form-inline" size="small">
       <el-form-item label="审批人">
-        <el-input v-model="formInline.user" placeholder="审批人"></el-input>
+        <el-input v-model="formInline.user" placeholder="审批人" />
       </el-form-item>
       <el-form-item label="活动区域">
         <el-select v-model="formInline.region" placeholder="活动区域">

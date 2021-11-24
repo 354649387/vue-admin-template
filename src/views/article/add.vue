@@ -3,7 +3,7 @@
     <el-card class="box-card">
       <el-form ref="form" :model="form" label-width="80px" size="small">
         <el-form-item label="文章标题">
-          <el-input v-model="form.title" style="width: 25%;"></el-input>
+          <el-input v-model="form.title" style="width: 25%;" />
         </el-form-item>
         <el-form-item label="所属栏目">
           <el-select v-model="form.category" placeholder="请选择所属栏目">
@@ -12,7 +12,7 @@
           </el-select>
         </el-form-item>
         <el-form-item label="文章简介">
-          <el-input type="textarea" v-model="form.desc" style="width: 35%;"></el-input>
+          <el-input type="textarea" v-model="form.desc" style="width: 35%;" />
         </el-form-item>
         <el-form-item label="缩略图">
             <el-upload
