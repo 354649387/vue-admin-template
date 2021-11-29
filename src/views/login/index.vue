@@ -44,8 +44,8 @@
       <el-button :loading="loading" type="primary" style="width:100%;margin-bottom:30px;" @click.native.prevent="handleLogin">Login</el-button>
 
       <div class="tips">
-        <span style="margin-right:20px;">username: admin</span>
-        <span> password: any</span>
+        <span style="margin-right:20px;cursor: pointer;" @click="missPwd()">忘记密码</span>
+        <span style="float: right;cursor: pointer;" @click="register()"> 注册</span>
       </div>
 
     </el-form>
@@ -95,6 +95,13 @@ export default {
     }
   },
   methods: {
+    register(){
+      console.log('注册')
+      this.$router.push('/register');
+    },
+    missPwd(){
+      console.log('忘记密码')
+    },
     showPwd() {
       if (this.passwordType === 'password') {
         this.passwordType = ''
