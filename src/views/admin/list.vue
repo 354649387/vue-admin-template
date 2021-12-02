@@ -1,5 +1,6 @@
 <template>
   <div class="app-container">
+    <div @click="pushToken">token</div>
     <el-table
       v-loading="listLoading"
       :data="list"
@@ -73,6 +74,21 @@ export default {
         this.list = response.data.items
         this.listLoading = false
       })
+    },
+    pushToken(){
+
+      let token = localStorage.getItem('ApiToken');
+
+      console.log(localStorage.getItem('ApiToken'))
+
+      this.$axios.post('/api/user/pushToken',{
+
+      }).then(() => {
+
+
+
+      })
+
     }
   }
 }
