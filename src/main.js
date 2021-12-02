@@ -61,6 +61,7 @@ axios.interceptors.request.use(function(config) {
 
 axios.interceptors.response.use(
   (res) => {
+
     //如果状态码为2001,代表后端校验前端在header里传递的token不通过
     if (res.data.code === 2001) {
       Message({
@@ -74,9 +75,12 @@ axios.interceptors.response.use(
       }, 2000)
 
     }
+
+    return res;
+
   },
   (err) => {
-
+      return Promise.reject(err);
   }
 );
 

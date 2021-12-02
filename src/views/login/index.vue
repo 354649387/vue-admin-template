@@ -36,6 +36,7 @@
 </template>
 
 <script>
+  import { Message } from 'element-ui';
   export default {
     name: 'Login',
     data() {
@@ -108,14 +109,18 @@
 
                   }else{
 
-                     console.log(data.msg)
+                     Message({
+                       message: data.msg,
+                       type: 'error',
+                       duration:2000
+                     });
 
                   }
 
 
 
               })
-              .catch(function(error) {
+              .catch((error) => {
                 console.log(error);
               });
 
